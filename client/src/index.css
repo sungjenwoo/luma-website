@@ -240,3 +240,10 @@ button:focus-visible, a:focus-visible { outline: 3px solid rgba(230,59,114,.32);
 .studio-page-more { display:flex; width:24px; height:24px; align-items:center; justify-content:center; border-radius:5px; color:rgba(33,25,26,.45); }
 .studio-page-more:hover { background:rgba(33,25,26,.08); color:#21191a; }
 .studio-select { width:100%; margin-top:8px; border:1px solid rgba(33,25,26,.1); border-radius:6px; background:#fff; padding:7px; font-size:10px; outline:none; }
+
+.studio-agent-messages { max-height: 190px; overflow:auto; margin-top:12px; display:grid; gap:7px; }
+.studio-agent-message { border-radius:8px; padding:8px 9px; background:rgba(255,255,255,.06); }
+.studio-agent-message.user { background:rgba(230,59,114,.22); }
+.studio-agent-message.status { border-left:2px solid #ffb6ca; background:rgba(255,255,255,.04); }
+.studio-agent-message span { display:block; font:9px/1.2 ui-monospace,monospace; letter-spacing:.12em; color:#ffb6ca; }
+.studio-agent-message p { margin-top:4px; color:rgba(255,255,255,.78); font-size:10px; line-height:1.45; }
