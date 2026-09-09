@@ -15,11 +15,14 @@ import {
   Pricing,
 } from "./pages/LumaPages";
 import NotFound from "./pages/NotFound";
+import Studio from "./pages/Studio";
 
 function Router() {
   return (
-    <SiteShell>
-      <Switch>
+    <Switch>
+      <Route path="/studio" component={Studio} />
+      <SiteShell>
+        <Switch>
         <Route path="/" component={Home} />
         <Route path="/features" component={Features} />
         <Route path="/inspiration" component={Inspiration} />
@@ -30,9 +33,10 @@ function Router() {
         <Route path="/login"><Auth mode="login" /></Route>
         <Route path="/signup"><Auth mode="signup" /></Route>
         <Route path="/404" component={NotFound} />
-        <Route component={NotFound} />
-      </Switch>
-    </SiteShell>
+          <Route component={NotFound} />
+        </Switch>
+      </SiteShell>
+    </Switch>
   );
 }
 
@@ -50,4 +54,3 @@ export default function App() {
 }
 
 export { Router };
-
