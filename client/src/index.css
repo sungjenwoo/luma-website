@@ -231,3 +231,12 @@ button:focus-visible, a:focus-visible { outline: 3px solid rgba(230,59,114,.32);
 @media (prefers-reduced-motion: reduce) { .studio-app *, .studio-editor *, .studio-preview-mode * { transition-duration:0.01ms !important; } }
 
 .studio-editor.is-preview > .studio-editor-bar { display:none; }
+
+.studio-canvas-element { cursor: grab; touch-action: none; user-select: none; }
+.studio-canvas-element:active { cursor: grabbing; }
+.studio-canvas-element.selected { z-index: 20; box-shadow: 0 0 0 1px #e63b72, 0 0 0 4px rgba(230,59,114,.14); }
+.studio-canvas-element.selected .studio-element-content { user-select: text; }
+.studio-resize-handle { position:absolute; right:-5px; bottom:-5px; width:10px; height:10px; border:2px solid #fff; border-radius:3px; background:#e63b72; cursor:nwse-resize; }
+.studio-page-more { display:flex; width:24px; height:24px; align-items:center; justify-content:center; border-radius:5px; color:rgba(33,25,26,.45); }
+.studio-page-more:hover { background:rgba(33,25,26,.08); color:#21191a; }
+.studio-select { width:100%; margin-top:8px; border:1px solid rgba(33,25,26,.1); border-radius:6px; background:#fff; padding:7px; font-size:10px; outline:none; }
