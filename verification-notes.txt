@@ -1,0 +1,3 @@
+Desktop verification (1440x1000) completed for /, /features, /inspiration, /pricing, /download, /docs, and /about.
+
+Findings: shared navbar is consistent and active route indicators render; hero visual asset loads; route-specific content renders with no obvious broken images; pink/cream/ink visual system is consistent; Download page clearly labels platform cards as Coming soon and does not fake installers; Docs and Inspiration controls render on first view. Mobile verification remains.
