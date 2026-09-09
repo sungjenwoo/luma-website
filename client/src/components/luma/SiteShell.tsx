@@ -84,7 +84,7 @@ export function PageIntro({ eyebrow, title, body, children }: { eyebrow: string;
 }
 
 export function MiniCTA() {
-  return <section className="container py-20 sm:py-28"><div className="grain relative overflow-hidden rounded-[2rem] bg-[#21191a] px-7 py-12 text-white sm:px-14 sm:py-16"><div className="relative max-w-[630px]"><div className="eyebrow text-[#ffb6ca]">Your next tab</div><h2 className="display mt-4 text-4xl font-semibold leading-[1.02] sm:text-5xl">Ideas should have somewhere to go.</h2><p className="mt-5 max-w-[490px] leading-7 text-white/65">Download Luma Studio and move from a blank page to something you can feel.</p><div className="mt-8"><PrimaryButton href="/download">Download Luma Studio</PrimaryButton></div></div></div></section>;
+  return <section className="container py-20 sm:py-28" />;
 }
 
 export default SiteShell;
