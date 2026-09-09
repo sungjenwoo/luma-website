@@ -57,7 +57,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </nav>
       </div>}
     </header>
-    <main>{children}</main>
+    <main className="page-shell">{children}</main>
     <Footer />
   </div>;
 }
