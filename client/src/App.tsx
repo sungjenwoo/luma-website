@@ -1,6 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
+import { Route, Router as WouterRouter, Switch } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import SiteShell from "./components/luma/SiteShell";
@@ -17,7 +18,7 @@ import {
 import NotFound from "./pages/NotFound";
 import Studio from "./pages/Studio";
 
-function Router() {
+function AppRouter() {
   return (
     <Switch>
       <Route path="/studio" component={Studio} />
@@ -38,6 +39,10 @@ function Router() {
       </SiteShell>
     </Switch>
   );
+}
+
+function Router() {
+  return import.meta.env.VITE_LUMA_ELECTRON === "1" ? <WouterRouter hook={useHashLocation}><AppRouter /></WouterRouter> : <AppRouter />;
 }
 
 export default function App() {

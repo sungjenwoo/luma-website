@@ -29,7 +29,7 @@ function createWindow() {
   });
 
   const indexPath = path.join(__dirname, "..", "dist", "public", "index.html");
-  window.loadFile(indexPath);
+  window.loadFile(indexPath, { hash: "studio" });
   if (isDev) window.webContents.openDevTools({ mode: "detach" });
 }
 

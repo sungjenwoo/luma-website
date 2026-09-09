@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
-    "desktop:run": "pnpm build && electron .",
-    "desktop:dist": "pnpm build && electron-builder --win nsis --x64",
+    "desktop:run": "node electron/build.cjs && electron .",
+    "desktop:dist": "node electron/build.cjs && electron-builder --win nsis --x64",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
